@@ -40,28 +40,11 @@ public class Aufgabe4 {
         List<Integer> greaterSorted = quicksort(greater), smallerSorted = quicksort(smaller);
 
         result.addAll(greaterSorted);
-        if (isPrime(pivot))
-            result.add(pivot);
+        result.add(pivot);
         result.addAll(smallerSorted);
 
         return result;
 
     }
 
-    public static boolean isPrime(int num) {
-        boolean isPrime = true;
-
-        if (num <= 1)
-            return false;
-
-        for (int i = 2; i <= num / 2; i++) {
-            if ((num % i) == 0) {
-                isPrime = false;
-                break;
-            }
-        }
-
-        return isPrime;
-
-    }
 }
