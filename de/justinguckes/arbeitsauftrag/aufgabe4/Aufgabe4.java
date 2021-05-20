@@ -2,6 +2,7 @@ package justinguckes.arbeitsauftrag.aufgabe4;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Aufgabe4 {
@@ -12,8 +13,9 @@ public class Aufgabe4 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Maximum: ");
         int max = scanner.nextInt();
+        Random random = new Random();
         for (int i = 0; i <= max; i++)
-            list.add(i);
+            list.add(random.nextInt(max));
 
         System.out.println("Ergebnis: " + quicksort(list));
         scanner.close();
